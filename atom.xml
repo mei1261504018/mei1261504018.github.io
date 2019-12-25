@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-12-25T07:59:50.496Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的第一篇博客</title>
+    <link href="http://yoursite.com/2019/12/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2019/12/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</id>
+    <published>2019-12-17T07:45:04.562Z</published>
+    <updated>2019-12-25T07:59:50.496Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="我的第一篇博客–关于怎么搭建静态博客hexo"><a href="#我的第一篇博客–关于怎么搭建静态博客hexo" class="headerlink" title="我的第一篇博客–关于怎么搭建静态博客hexo"></a>我的第一篇博客–关于怎么搭建静态博客hexo</h1><hr><h2 id="安装前的工具"><a href="#安装前的工具" class="headerlink" title="安装前的工具"></a>安装前的工具</h2><pre><code>-git         --是一个网上仓库     -node.js      --Node 是一个让 JavaScript 运行在服务端的开发平台（我理解就是一个html环境）-hexo          --是一个轻量级博客框架</code></pre><br><p>#1. 安装步骤</p><h3 id="1-nodej-js-下载并安装"><a href="#1-nodej-js-下载并安装" class="headerlink" title="1. nodej.js 下载并安装"></a>1. nodej.js 下载并安装</h3><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">node官方链接地址</a> :<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a>  网页打开下载，并傻瓜式安装</p><p><img alt="node.js" title="node" data-src="%E7%85%A7%E7%89%871.png" class="lazyload"></p><pre><code>安装完成后有两个组件node.js 文件本身npm  包管理器--搭建博客必须的东西</code></pre><hr><h3 id="2-npm环境配置"><a href="#2-npm环境配置" class="headerlink" title="2. npm环境配置"></a>2. npm环境配置</h3><p>在com窗口（黑窗口）下，进行下面的命令行看npm是否成功，如不成功，返回步骤1</p><pre><code>查看node版本： node -v查看npm版本：  npm -v</code></pre><h3 id="3-安装cnpm"><a href="#3-安装cnpm" class="headerlink" title="3. 安装cnpm"></a>3. 安装cnpm</h3><blockquote><p><strong>npm是针对国外地址的下载的工具，速度很慢。所以通过npm安装一个国内的镜像安装工具cnpm。后面的操作可以通过cnpm操作，但实际上npm跟cnpm的作用是一样的。安装指令如下</strong></p></blockquote><pre><code>&gt;npm install -g cnpm --registry=http://registry.npm.taobao.org</code></pre><p>安装成功后，黑窗口检测cnpm版本，可以查看是否安装成功。</p><pre><code>&gt;cnpm -v</code></pre><h3 id="4-用cnpm安装进行安装hexo"><a href="#4-用cnpm安装进行安装hexo" class="headerlink" title="4. 用cnpm安装进行安装hexo"></a>4. 用cnpm安装进行安装hexo</h3><blockquote><p><strong>cnpm 安装成功后，开始下载hexo框架的</strong></p></blockquote><pre><code>&gt;cnpm install -g hexo-cli</code></pre><p>安装成功后，验证是否成功，有版本好则安装成功</p><pre><code>&gt;hexo -v</code></pre><p>出现版本号，及验证成功<br><br></p><hr><h1 id="2-开始搭建hexo博客系统"><a href="#2-开始搭建hexo博客系统" class="headerlink" title="2. 开始搭建hexo博客系统"></a>2. 开始搭建hexo博客系统</h1><h3 id="1-新建一个文件夹“mblog”-（文件夹名字随便），这个文件夹的作用就是，以后的hexo所有的文件。包括hexo配置设置、博客内容的储存等。出现错误可以删除这个文件夹，从上面重新来"><a href="#1-新建一个文件夹“mblog”-（文件夹名字随便），这个文件夹的作用就是，以后的hexo所有的文件。包括hexo配置设置、博客内容的储存等。出现错误可以删除这个文件夹，从上面重新来" class="headerlink" title="1. 新建一个文件夹“mblog” （文件夹名字随便），这个文件夹的作用就是，以后的hexo所有的文件。包括hexo配置设置、博客内容的储存等。出现错误可以删除这个文件夹，从上面重新来"></a>1. 新建一个文件夹“mblog” （文件夹名字随便），这个文件夹的作用就是，以后的hexo所有的文件。包括hexo配置设置、博客内容的储存等。出现错误可以删除这个文件夹，从上面重新来</h3><pre><code>新建文件夹方式一:通过cmd窗口   &gt;mkdir 文件名方式二：自己在文件夹任意位置。 </code></pre><h3 id="2-初始化一个博客"><a href="#2-初始化一个博客" class="headerlink" title="2. 初始化一个博客"></a>2. 初始化一个博客</h3><p>打开cmd窗口，进入之前新键的“blog”包下，进行网上资源的下载</p><pre><code>&gt;hexo init</code></pre><p>成功后打开文件夹，文件夹下就会有下载好的hexo框架的相关内容</p><h3 id="3-启动hexo博客的预览模式"><a href="#3-启动hexo博客的预览模式" class="headerlink" title="3. 启动hexo博客的预览模式"></a>3. 启动hexo博客的预览模式</h3><pre><code>&gt;hexo s:  </code></pre><p>端口号启动,网页打开端口号，就会看见默认生成的博客文章<br><br></p><hr><h1 id="3-编写、更新维护博客内容"><a href="#3-编写、更新维护博客内容" class="headerlink" title="3.编写、更新维护博客内容"></a>3.编写、更新维护博客内容</h1><h3 id="1-博客文件的建立"><a href="#1-博客文件的建立" class="headerlink" title="1. 博客文件的建立"></a>1. 博客文件的建立</h3><blockquote><p><strong>方式一</strong>：在mblog目标文件夹下，找到\source_posts位置。<br> ** _post ** 文件夹下的以 .md后缀名生成的文件就是自己的博客。<br>新建以.md文件，用note++、markdoem文件编辑器编辑，保存成功</p></blockquote><blockquote><p><strong>方式二</strong>：控制台输出<br>新建一个文档标题，内容为空打开文档，在tags下编辑内容。<br>hexo n “文章标题”</p></blockquote><ul><li><p><strong>(进行方式二的时候需要停止掉hexo，否则控制台输出不了。 CTRL+c退出预览模式后再进行编辑。)</strong></p><h3 id="2-更新博客"><a href="#2-更新博客" class="headerlink" title="2. 更新博客"></a>2. 更新博客</h3><p>当重新新建博客文件时候</p><blockquote><p>控制台博文清理：    </p></blockquote><blockquote><p>hexo clean</p></blockquote></li></ul><blockquote><p>博文生成：</p></blockquote><pre><code>&gt;hexo g（generate） </code></pre><blockquote><p>hexo重现启动：</p></blockquote><pre><code>&gt;hexo s</code></pre><p>然后默认网址输出就可以了<br><br></p><hr><h1 id="功能强化1—部署到免费的服务器"><a href="#功能强化1—部署到免费的服务器" class="headerlink" title="功能强化1—部署到免费的服务器"></a>功能强化1—部署到免费的服务器</h1><blockquote><p>为什么搭建到免费的平台上<br>在我们自己未搭建时，每次使用都需要hexo s命令部署.当搭建到免费的平台仓库后，可以直接打开地址访问博客。 这里访问的博客内容是最后一个部署的内容，如果想更新就得更新部署</p></blockquote><p>##github平台的部署</p><h3 id="1-构建仓库"><a href="#1-构建仓库" class="headerlink" title="1. 构建仓库"></a>1. 构建仓库</h3><blockquote><p>登录GitHub官网，新建仓库。仓库名称“自己的昵称”.github.io    ,作为一个空仓库。用来保存后期上传hexo文件</p></blockquote><h3 id="2-git环境搭建"><a href="#2-git环境搭建" class="headerlink" title="2. git环境搭建"></a>2. git环境搭建</h3><blockquote><p>在cmd窗口的hexo文件夹目录下安装一个部署git的命令行,我的是mblog文件夹下</p></blockquote><pre><code>&gt;cnpm install --save hexo-deployer-git</code></pre><p>安装成功后</p><h3 id="3-设置-config-yml文件的三个标签"><a href="#3-设置-config-yml文件的三个标签" class="headerlink" title="3. 设置_config.yml文件的三个标签:"></a>3. 设置_config.yml文件的三个标签:</h3><blockquote><p><strong>这个_config.yml文件 在之前自己设置hexo下载的文件夹下</strong></p></blockquote><pre><code>1、type：git     -类型2、repo:            -git仓库的地址3、breach:        -默认分支</code></pre><h3 id="4-部署到远端"><a href="#4-部署到远端" class="headerlink" title="4. 部署到远端"></a>4. 部署到远端</h3><pre><code>&gt;gexo d(deployer-部署)    </code></pre><h3 id="5-刷新、浏览器访问"><a href="#5-刷新、浏览器访问" class="headerlink" title="5. 刷新、浏览器访问"></a>5. 刷新、浏览器访问</h3><blockquote><p><strong>这里的浏览器地址就是之前参考设置的地址</strong><br><br></p></blockquote><hr><p>#功能强化2—hexo的主题修改</p><blockquote><p>可以根据自己的爱好修改喜欢的主题</p></blockquote><p>###1.下载主题：</p><blockquote><p>网上找到自己喜欢的hexo主题，<strong>克隆主题到theme文件夹下的yilia文件下</strong></p></blockquote><pre><code>git clone https://github.com/litten.hexo-theme-yilia.git   themes/yilia</code></pre><p>###2. 修改默认主题配置</p><blockquote><p>下载成功后，进入yilia文件夹。找到_config.yml文件找到<strong>theme</strong>标签修改默认 theme：主题名</p></blockquote><p>###3. 控制台部署</p><blockquote><p><strong>hexo清除</strong></p></blockquote><pre><code>&gt;hexo c</code></pre><blockquote><p><strong>生成</strong></p></blockquote><pre><code>&gt;hexo g</code></pre><blockquote><p><strong>启动</strong></p></blockquote><pre><code>&gt;hexo s</code></pre><blockquote><p><strong>网页更新</strong></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;我的第一篇博客–关于怎么搭建静态博客hexo&quot;&gt;&lt;a href=&quot;#我的第一篇博客–关于怎么搭建静态博客hexo&quot; class=&quot;headerlink&quot; title=&quot;我的第一篇博客–关于怎么搭建静态博客hexo&quot;&gt;&lt;/a&gt;我的第一篇博客–关于怎么搭建静态博客he
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2019/12/17/hello-world/"/>
+    <id>http://yoursite.com/2019/12/17/hello-world/</id>
+    <published>2019-12-17T07:39:49.491Z</published>
+    <updated>2019-12-17T07:39:49.491Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
